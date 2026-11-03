@@ -1,0 +1,16 @@
+Package: tenniscareer
+Title: Retrieve and Plot Tennis Career Data
+Version: 0.1.0
+Authors@R:
+    person("Xiaoyang", "Yan", , "arialyan1110@gmail.com", role = c("aut", "cre"))
+Description: Retrieve tennis career match data and plot player ages and
+    age differences, with points colored by match results.
+License: MIT + file LICENSE
+Config/roxygen2/version: 8.1.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    jsonlite
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
