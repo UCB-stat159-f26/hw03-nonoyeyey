@@ -39,17 +39,9 @@ The tests use local fixtures. The usage examples above retrieve live data.
 
 ## Reflection
 
-My first live check for Nadal returned matches only through 2016.
-Adding the second JavaScript file extended the results through 2018,
-but the player page contained matches through 2024. I learned to check
-the date range as well as the row count. A response can look reasonable
-and still be missing years of data.
+While testing my R package, I learned to check which years the data actually covered. My first result for Nadal stopped in 2016. Reading another file from Tennis Abstract extended the results to 2018, but his player page included matches through 2024. After that, I started checking the first and last match dates along with the number of rows.
 
-I also found that selecting the player page by default dropped Serena's
-early matches. The package now compares the birth date, row count, and
-date range before preferring the player page. This checks coverage at the
-beginning and end of the data, but it does not verify every match
-individually.
+Serena’s data showed me why the row count alone can be misleading. Her player page had more rows, but it left out some of her earliest matches. I changed the package to check that the player page covers at least the same date range as the other data source before using it. I’d still need to compare individual records to find missing matches within that range.
 
 ## AI assistance
 
